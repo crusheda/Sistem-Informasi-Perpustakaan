@@ -43,13 +43,13 @@ Route::get('/home/datasiswa', function () {
     return view('admin/datasiswa');
 })->name('datasiswa');
 
-Route::group(['prefix' => 'datasiswa'], function(){
+// Route::group(['prefix' => 'datasiswa'], function(){
  
-    Route::get('/', 'DataSiswaController@index');
-    Route::get('/create', 'DataSiswaController@create');
-    Route::post('/store', 'DataSiswaController@store');
-    Route::get('/show/{id}', 'DataSiswaController@show');
-    Route::post('/update/{id}', 'DataSiswaController@update');
-    Route::post('/destroy/{id}', 'DataSiswaController@destroy');
+//     Route::get('/', 'DataSiswaController@index');
+//     Route::get('/create', 'DataSiswaController@create');
+//     Route::post('/store', 'DataSiswaController@store');
+//     Route::get('/show/{id}', 'DataSiswaController@show');
+//     Route::post('/update/{id}', 'DataSiswaController@update');
+//     Route::post('/destroy/{id}', 'DataSiswaController@destroy');
  
-});
+// });

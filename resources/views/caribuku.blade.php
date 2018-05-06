@@ -70,12 +70,14 @@
 					<div class="col-sm-5">
 						<table class="table table-striped">
 						<thead>
+							@foreach($user as $userku)
 							<tr>
-							<th scope="col">1</th>
-							<th scope="col">First</th>
+							<th scope="col">{{$userku -> id}}</th>
+							<th scope="col">{{$userku -> name}}</th>
 							<th scope="col">Last</th>
 							<th scope="col">Handle</th>
 							</tr>
+							@endforeach
 						</thead>
 						<tbody>
 							<tr>

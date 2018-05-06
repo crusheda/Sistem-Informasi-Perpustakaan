@@ -114,7 +114,7 @@
 				<div class="col-md-3"></div>
 			</div>
 			<br>
-			<center><p>Total Pengunjung : <a><h2>3000</h2></a></p></center>
+		<center><p>Total Pengunjung : <a><h2>{{ $jumlahpengunjung }}</h2></a></p></center>
 		</div>
 	</section>
 	<!--main-section-end-->
@@ -131,20 +131,21 @@
 		<div class="">
 			<center><a><h3>Mohon Mengisi Daftar Pengunjung Terlebih Dahulu</h3></a></center>
 			<div class="form">
-				<form action="" method="post" role="form" class="contactForm">
+				<form action="/tambahpengunjung" method="post" role="form" class="contactForm">
+					{{ csrf_field() }}
 					<div class="form-group">
-						<input type="text" name="name" class="form-control input-text" id="name" placeholder="Nama Lengkap" data-rule="minlen:2" />
+						<input type="text" name="namapengunjung" class="form-control input-text" placeholder="Nama Lengkap" data-rule="minlen:2" />
 						<div class="validation"></div>
 					</div>
 					<div class="form-group">
-						<input type="text" class="form-control input-text" name="nis" id="nis" placeholder="Nomer Induk Siswa" data-rule="minlen:2"/>
+						<input type="text" class="form-control input-text" name="nispengunjung" placeholder="Nomer Induk Siswa" data-rule="minlen:2"/>
 						<div class="validation"></div>
 					</div>
-					<a><h3>Keperluan	: </h3></a>
-					<input type="checkbox" aria-label="" id=""><a> Baca Buku</a><br>
-					<input type="checkbox" aria-label="" id=""><a> Pinjam Buku</a><br>
-					<input type="checkbox" aria-label="" id=""><a> Mengembalikan Buku</a><br>
-					<div class="text-center"><button type="submit" class="input-btn">Submit</button></div>
+					{{-- <a><h3>Keperluan	: </h3></a>
+					<input type="checkbox" aria-label="" id="" name="baca"><a> Baca Buku</a><br>
+					<input type="checkbox" aria-label="" id="" name="pinjam"><a> Pinjam Buku</a><br>
+					<input type="checkbox" aria-label="" id="" name="kembali"><a> Mengembalikan Buku</a><br> --}}
+					<div class="text-center"><button type="submit" class="input-btn" value="addpengunjung">Submit</button></div>
 				</form>
 			</div>
 		</div>

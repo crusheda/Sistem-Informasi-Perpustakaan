@@ -152,7 +152,6 @@
 		</section>
 	</div>
 
-	
 	@include("footer")	
 
 	<script type="text/javascript">

@@ -6,7 +6,7 @@
 <head>
 
 	<title>Cari Buku - Perpustakaan</title>
-	<link rel="icon" href="{{ URL::asset('img/smk.png') }}" type="image/png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('img/smk.png') }}">
 	<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
 
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -52,56 +52,48 @@
 				<div class="container">
 					<h2>Cari Buku</h2>
 					<h6>Halaman Pencarian Buku Perpustakaan</h6>				
-				</div>
-				<div class="row">
-					<div class="col-sm-1"></div>
-					<div class="col-sm-5">
-						<div class="form">
-							<form action="" method="post" role="form" class="contactForm">						
-								<div class="form-group">
-									<textarea class="form-control input-text text-area" name="judulbuku" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Judul Buku"></textarea>
-									<div class="validation"></div>
-								</div>
+				
+					<div class="row">
+						<div class="col-sm-1"></div>
+						<div class="col-sm-5">
+							<div class="form">
+								<form action="" method="post" role="form" class="contactForm">						
+									<div class="form-group">
+										<textarea class="form-control input-text text-area" name="judulbuku" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Judul Buku"></textarea>
+										<div class="validation"></div>
+									</div>
 
-								<div class="text-center"><button type="submit" class="input-btn">Cari Buku</button></div>
-							</form>
+									<div class="text-center"><button type="submit" class="input-btn">Cari Buku</button></div>
+								</form>
+							</div>
 						</div>
+						<div class="col-sm-5">
+							<table class="table table-striped">
+							<thead>
+								{{-- @foreach($user as $userku) --}}
+								<tr>
+								{{-- <th scope="col">{{$userku -> id}}</th> --}}
+								<th scope="col">No</th>
+								<th scope="col">Judul Buku</th>
+								<th scope="col">Penulis</th>
+								<th scope="col">Tahun</th>
+								<th>Aksi</th>
+								</tr>
+								{{-- @endforeach --}}
+							</thead>
+							<tbody>
+								<tr>
+								<th scope="row">1</th>
+								<td>Jembatan Merahku</td>
+								<td>Supardi Nurahman</td>
+								<td>2001</td>
+								<td><button class="btn btn-success btn-sm">PINJAM</button></td>
+								</tr>							
+							</tbody>
+							</table>
+						</div>
+						<div class="col-sm-1"></div>
 					</div>
-					<div class="col-sm-5">
-						<table class="table table-striped">
-						<thead>
-							@foreach($user as $userku)
-							<tr>
-							<th scope="col">{{$userku -> id}}</th>
-							<th scope="col">{{$userku -> name}}</th>
-							<th scope="col">Last</th>
-							<th scope="col">Handle</th>
-							</tr>
-							@endforeach
-						</thead>
-						<tbody>
-							<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
-							</tr>
-							<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@fat</td>
-							</tr>
-							<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-							</tr>
-						</tbody>
-						</table>
-					</div>
-					<div class="col-sm-1"></div>
 				</div>
 			</section>
 		</div>

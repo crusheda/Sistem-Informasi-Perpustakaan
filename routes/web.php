@@ -11,15 +11,10 @@
 |
 */
 
-Route::get('/home/caribuku', 'UserController@index' )->name('caribuku');
-Route::get('/home/admin',  'UserController@index')->name('homeadmin');
-Route::get('/home', 'indexController@home')->name('home');
+Route::get('/home/admin', 'UserController@stats')->name('homeadmin');
+Route::get('/home', 'indexController@home')->name('index');
 
 Route::post('/tambahpengunjung', 'pengunjungController@tambahpengunjung');
-
-Route::get('/', function () {
-    return view('index');
-});
 
 // Route::get('/home', function () {
 //     return view('index');
@@ -29,10 +24,6 @@ Route::get('/home/admin/login', function () {
     return view('loginadmin');
 })->name('loginadmin');
 
-Route::get('/coba', function () {
-    return view('admin/index');
-});
-
 Route::get('/home/databuku', function () {
     return view('admin/databuku');
 })->name('databuku');
@@ -40,6 +31,10 @@ Route::get('/home/databuku', function () {
 Route::get('/home/datasiswa', function () {
     return view('admin/datasiswa');
 })->name('datasiswa');
+
+Route::get('/home/caribuku', function(){
+    return view('caribuku');
+})->name('caribuku');
 
 
 

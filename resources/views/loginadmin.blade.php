@@ -6,7 +6,7 @@
 <head>
 
 	<title>Login Admin - Perpustakaan</title>
-	<link rel="icon" href="{{ URL::asset('img/smk.png') }}" type="image/png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('img/smk.png') }}">
 	<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
 
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
